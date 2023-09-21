@@ -2,9 +2,11 @@ package com.reserva.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import com.reserva.app.model.Equipamento;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @SpringBootApplication
+
+@EntityScan("com.reserva.app.model")
 public class AppApplication {
 
 	public static void main(String[] args) {
