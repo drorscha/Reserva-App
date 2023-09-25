@@ -7,13 +7,10 @@ package com.reserva.app.model;
 import lombok.Data;
 
 import javax.persistence.*;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @Entity
 @Data
-
+@Table(name = "equipamento")
 public class Equipamento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,11 +19,11 @@ public class Equipamento {
     private String categoria;
     private boolean disponivel;
 
-    // Construtor vazio (necess·rio para JPA)
+    // Construtor vazio (necess√°rio para JPA)
     public Equipamento() {
     }
 
-    // Construtor com par‚metros
+    // Construtor com par√¢metros
     public Equipamento(String nome, String categoria, boolean disponivel) {
         this.nome = nome;
         this.categoria = categoria;
